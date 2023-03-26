@@ -1,0 +1,75 @@
+---
+title: "IDS 701 - Team 1 Project Proposal"
+author: "Chen Elisa, Liu Xiaoquan, Qu Genesis"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::include_graphics
+```
+
+## **Topic**
+College students today appear to be more stressed and anxious than ever before. This is a major problem affecting the student's mental and physical well-being, and greatly impacts the student's academic performance. According to a survey conducted by the National Institutes of Health, 71% of the respondents indicated increased stress and anxiety due to the COVID-19 outbreak. There were several stressors that were identified, but one of the major indicators listed was decreased social interactions due to physical distancing (86% of respondents)[1]. 
+
+During the pandemic, many students and academic staff realized how online / hybrid learning could make education more engaging and accessible for many students. While there could be many benefits to this, it is important to assess whether this comes at a cost of the well-being of students[2].
+
+## **Exploratory Data Analysis**
+Given our topic and the problem we want to address (higher anxiety levels of US college students), we want to explore the following questions in depth:
+
+**1. What is the portion of students with high anxiety level by instructional format? Is the difference statistically significant?**
+
+Answering this question would validate the problem that we're observing. The students in the survey were given multiple prompts to assess their anxiety level. The researchers who conducted the survey created a binary field to indicate whether the student experienced high anxiety level based on the responses given by students. 
+
+```{r, echo = FALSE, fig.align='center', out.width = "200px", out.height = "150px"}
+knitr::include_graphics('/Users/edawg/Desktop/Duke/UDS/uds-2023-team-1/30_intermediate_files/EDA_1.png')
+```
+
+It appears that the portion of students who experienced high anxiety levels were about the same for online and in-person students. The difference between online and in-person anxiety levels were statistically insignificant. However, when we measured the difference between hybrid and in-person students' anxiety levels, we observed a statistically significant difference. At a first glance it would appear that the anxiety level is fairly consistent across all instructional formats. However, it is good to keep in mind that there are various factors that we have not accounted for yet including the student's access to mental health resources and enrollment status. 
+
+**2. Does the anxiety level differ by the enrollment status and instructional format?** 
+
+Answering this question would help us understand whether the trend we observe vary by enrollment status perhaps. This could help us potentially narrow down our scope of study.
+
+```{r, echo = FALSE, fig.align='center', out.width = "200px", out.height = "150px"}
+knitr::include_graphics('/Users/edawg/Desktop/Duke/UDS/uds-2023-team-1/30_intermediate_files/EDA_2.png')
+```
+
+Motivated by the first question, we wanted to explore whether the anxiety level would vary if we also accounted for the enrollment status. Interestingly, we observe now that the portion of students with high anxiety level increased for hybrid and online students if they were enrolled in school full-time. This could potentially signal that we want to control for the student's enrollment status as well when we measure their anxiety levels. 
+
+**3. Do students know how to access mental health resources offered by their college (across different instructional forms)?** 
+
+Answering this question would help us understand whether there's a potential relationship between anxiety level and whether the student knows where to access mental health resources in their college. In the survey, the students were asked to evaluate on a binary scale if they were "to seek professional help for [their] mental or emotional health, [they] would know where to access [their] school’s
+resources." 
+
+```{r, echo = FALSE, fig.align='center', out.width = "200px", out.height = "150px"}
+knitr::include_graphics('/Users/edawg/Desktop/Duke/UDS/uds-2023-team-1/30_intermediate_files/EDA_3.png')
+```
+
+It appears from the above graph that students doing school entirely remote are significantly less (~20% less) aware of their school's mental health resource offerings compared to the students studying in-person or in a hybrid model. The lack of knowledge about mental health resources could be one of the explanations to why students doing school online experience a higher anxiety level on average. 
+
+## **Project Question**
+
+In this project, we aim to explore the effects of social distancing measures on the anxiety levels of US college students during the years 2021-2022. As supported by our results from the EDA, the anxiety level is ~1-2% higher for students who did online / hybrid schooling and is even more pronounced among full-time students. Given our findings, the question that we're interested in answering is:
+
+**Did remote / hybrid schooling cause higher anxiety levels among US college students during the years 2021 - 2022?**
+
+Answering the proposed causal question would shed more light on whether online schooling will increase the anxiety levels of US college students and by how much. In the case that online school models will become more prevalent, it will become increasingly important to be aware of how this impacts the well-being of students and ensure the availability of mental health resources. 
+
+## **Ideal Experiment**
+
+## **Study Context**
+
+## **Project Design**
+
+## **Model Results**
+
+## **Final Variables Required**
+
+## **Data Sources**
+
+## **References**
+[1] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7473764/
+
+[2] https://www.weforum.org/agenda/2022/06/online-learning-higher-education-covid-19/ 
