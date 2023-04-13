@@ -15,14 +15,14 @@ def transform_df(df):
     # Change the date column to pandas datetime type
     df["date"] = pd.to_datetime(df["submission_date"])
     # Create an extra column of month-year combination
-    df["month-year"] = df["date"].apply(lambda x: x.strftime("%B-%Y"))
+    df["week-year"] = df["date"].apply(lambda x: x.strftime("%U-%Y"))
     # Create extra column for year
     df["year"] = df["date"].apply(lambda x: x.strftime("%Y"))
     # Subset for data between 2021-2022
     df_subset = df.copy()
     df_subset = df_subset.loc[df_subset["year"].isin(["2021", "2022"])]
     # Groupby to get number of new cases in each month
-    cases_by_month = df_subset.groupby(["month-year", "state"])["new_case"].sum()
+    cases_by_month = df_subset.groupby(["week-year", "state"])["new_case"].sum()
     # Reset the index to get dataframe instead of multi-index
     final_df = cases_by_month.reset_index()
     return final_df
