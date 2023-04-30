@@ -14,4 +14,6 @@ While our study suggests that online learning is adoptable, and even favorable t
 
 ## Paper
 
-You can read our paper under `50_docs/UDS_Final_Report.pdf`
+You can read our report paper under `50_docs/UDS_Final_Report.pdf`
+
+The report is authored by Genesis Qu, Elisa Chen, Xiaoquan Liu
